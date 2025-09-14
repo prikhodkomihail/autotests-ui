@@ -36,7 +36,7 @@ with sync_playwright() as playwright:
     expect(courses_title).to_have_text('Courses')
 
     courses_empty_icon = page.get_by_test_id('courses-list-empty-view-icon')
-    expect(courses_title).to_be_visible()
+    expect(courses_empty_icon).to_be_visible()
 
     courses_empty_title_text = page.get_by_test_id('courses-list-empty-view-title-text')
     expect(courses_empty_title_text).to_have_text('There is no results')
