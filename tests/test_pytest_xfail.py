@@ -6,6 +6,6 @@ def test_with_bug():
     assert 1 == 2
 
 
-@pytest.mark.xfail
+@pytest.mark.xfail(reason="Баг исправлен")
 def test_without_bug():
     pass
