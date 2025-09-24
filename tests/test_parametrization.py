@@ -28,7 +28,7 @@ def test_open_browser(browser: str):
 @pytest.mark.parametrize("user", ["Alice", "Zara"])
 class TestOperations:
     @pytest.mark.parametrize("account", ["Credit card", "Debit card"])
-    def test_user_with_operations(self, user: str):
+    def test_user_with_operations(self, user: str, account: str):
         print(f"User with operations: {user}")
 
     def test_user_without_operations(self, user: str):
