@@ -8,7 +8,7 @@ class LoginPage(BasePage):
 
         self.email_input = page.get_by_test_id("login-form-email-input").locator("input")
         self.password_input = page.get_by_test_id("login-form-password-input").locator("input")
-        self.login_btn = page.get_by_test_id("login-page-login-button")
+        self.login_button = page.get_by_test_id("login-page-login-button")
         self.registration_link = page.get_by_test_id('login-page-registration-link')
         self.wrong_email_or_password_alert = page.get_by_test_id('login-page-wrong-email-or-password-alert')
 
@@ -19,8 +19,8 @@ class LoginPage(BasePage):
         self.password_input.fill(password)
         expect(self.password_input).to_have_value(password)
 
-    def click_login_btn(self):
-        self.login_btn.click()
+    def click_login_button(self):
+        self.login_button.click()
 
     def click_registration_link(self):
         self.registration_link.click()
